@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - NeuroAuto</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f6f9; margin: 0; color: #333; }
+    header, footer { background: #003366; color: white; padding: 20px; text-align: center; }
+    main { max-width: 600px; margin: auto; padding: 30px 20px; }
+    h1 { color: #003366; }
+    form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #003366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .info { margin-top: 20px; font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contacto</h1>
+  </header>
+
+  <main>
+    <p>Atención preferente por las mañanas.</p>
+    <p>Ofrecemos servicio para toda Andalucía.</p>
+    <p>También puedes escribirnos a: <strong>neuroautoes@gmail.com</strong></p>
+    <p>O contactarnos por <a href="https://wa.me/34673229802">WhatsApp</a>.</p>
+
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 NeuroAuto
+  </footer>
+</body>
+</html>
