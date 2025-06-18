@@ -2,22 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Panel - NeuroAuto</title>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #fff; padding: 30px; }
-    h2 { color: #003366; }
-    ul { list-style: none; padding: 0; }
-    li { background: #f0f0f0; padding: 10px; margin-bottom: 8px; border-left: 4px solid #007bff; }
-  </style>
+  <title>Panel Privado - NeuroAuto</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-  <h2>Panel de Administración</h2>
-  <p>Aquí podrás gestionar tu contenido próximamente:</p>
-  <ul>
-    <li>🔧 Añadir productos a Tienda</li>
-    <li>🖼️ Subir imágenes a Galería</li>
-    <li>📝 Escribir nuevas entradas del Blog</li>
-    <li>📬 Ver suscripciones de clientes</li>
-  </ul>
+  <h2>Panel privado (solo autorizado)</h2>
+  <div id="contenido" style="display:none;">
+    <p>Contenido de administración aquí.</p>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+  <script>
+    const supabase = window.supabase.createClient(
+      'https://qpliftztfdlplvrwfaey.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwbGlmdHp0ZmRscGx2cndmYWV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyMzkzNTEsImV4cCI6MjA2NTgxNTM1MX0.U2yD_1hObL-QVEGc2eX2LQiD448-ojZszdNu3jo4qSw'
+    );
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        document.getElementById("contenido").style.display = "block";
+      } else {
+        window.location.href = "login.html";
+      }
+    });
+    function logout() {
+      supabase.auth.signOut().then(() => window.location.href = "login.html");
+    }
+  </script>
 </body>
 </html>
