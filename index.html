@@ -4,70 +4,61 @@
   <meta charset="UTF-8">
   <title>NeuroAuto - Electrónica Automotriz</title>
   <style>
-    :root {
-      --main-bg: #f3f6fa;
-      --accent: #003366;
-      --primary: #0077cc;
-      --light: #ffffff;
-      --shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--main-bg);
+      background: #f3f6fa;
       color: #333;
     }
     header {
-      background: url('banner.jpg') no-repeat center center;
-      background-size: cover;
+      background: #002244;
       color: white;
       text-align: center;
-      padding: 80px 20px 40px;
-      box-shadow: var(--shadow);
+      padding: 40px 20px 20px;
     }
     header img {
       height: 90px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255,255,255,0.95);
       padding: 8px;
     }
     nav {
-      background: var(--primary);
-      padding: 14px;
+      background: #0077cc;
+      padding: 15px;
       text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 16px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: opacity 0.2s ease;
     }
-    nav a:hover {
-      opacity: 0.8;
+    .hero {
+      background: url('hero.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
     }
-    main {
-      padding: 60px 20px;
-      max-width: 900px;
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      max-width: 700px;
       margin: auto;
-      background: var(--light);
-      box-shadow: var(--shadow);
-      border-radius: 12px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: var(--accent);
-      font-size: 1.8em;
+      font-size: 1.2em;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
     }
     footer {
-      background: var(--accent);
+      background: #002244;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 60px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -85,24 +76,14 @@
     <a href="galeria.html">Galería</a>
     <a href="tienda.html">Tienda</a>
   </nav>
-  <main>
-    <section>
-      <h2>¿Qué es el Chip Tuning?</h2>
-      <p>El chip tuning consiste en reprogramar el ECU del vehículo para mejorar el rendimiento, respuesta del motor y eficiencia de consumo.</p>
-    </section>
 
-    <section>
-      <h2>¿Qué es una Clonación de Módulos?</h2>
-      <p>La clonación permite transferir toda la información de una centralita dañada a otra de reemplazo, evitando emparejamientos o codificaciones.</p>
-    </section>
+  <section class="hero">
+    <h2>Especialistas en Electrónica del Automóvil</h2>
+    <p>Soluciones para centralitas, BSI, ECU, cuadros y todo tipo de módulos. Reprogramación, clonación, recuperación y optimización profesional para talleres y particulares.</p>
+  </section>
 
-    <section>
-      <h2>Stage 1 para tu Motor</h2>
-      <p>Una optimización segura del mapa del motor diseñada para uso diario con un equilibrio perfecto entre potencia y fiabilidad.</p>
-    </section>
-  </main>
   <footer>
-    &copy; 2025 NeuroAuto | Diseño técnico inspirado en IA
+    &copy; 2025 NeuroAuto | Electrónica Técnica Automotriz
   </footer>
 </body>
 </html>
